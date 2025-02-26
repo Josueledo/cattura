@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="logo_container">
+    <h1 class="name">CATTURA</h1>
+  </div>
+
+  <div class="menu">
+    <li class="item">item1</li>
+    <li class="item2">item2</li>
+  </div>
+
+  <div class="start">
+    <button>Comece agora</button>
+  </div>
+  <div class="responsive">
+    @if (!isVisible) {
+
+      <div class="bars" (click)="menu()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </div>
+    }
+    @if(isVisible){
+      <div class="close" (click)="menu()">
+        <fa-icon class="bars" [icon]="faClose"></fa-icon>
+      </div>
+    }
+      <div class="content">
+        <div class="menu">
+          <li>item1</li>
+          <li>item2</li>
+        </div>
+        <button>COMECE AGORA</button>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,99 @@
+@import "../../../styles.scss";
+
+.container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .banner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white1;
+    background-color: $primary;
+  }
+  #section2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white1;
+      width: 100%;
+      height: 700px;
+      padding: 70px 40px;
+      gap: 20px;
+      .left{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        video{
+          max-width: 550px;
+          width: 90%;
+        }
+      }
+      .right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        .item{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .title{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 10px;
+            h1{
+              font-size: 1.3rem;
+              color: $black;
+              position: relative;
+              &:hover{
+                cursor: pointer;
+                &::before{
+                  width: 100%;
+                }
+              }
+              &::before{
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                transition: all .3s;
+                bottom: -10px;
+                background-color: $black;
+              }
+            }
+
+          }
+        }
+      }
+  }
+}
+
+@media (width <= 800px) {
+  .container{
+    #section2{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .right{
+        width: 100%;
+      }
+      .left{
+        width: 100%;
+        video{
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}

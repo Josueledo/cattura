@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  scroll-behavior: smooth;
+}
+
+$primary:#6d95c9;
+$white1:#f7f7f7;
+$white2:#F1eee9;
+$secondary:#c2b280;
+$black:#1a1818;
+$dark_font:#1a1818;
+$border:rgb(192, 191, 191);
