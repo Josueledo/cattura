@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="content">
+    <h1>Contact Us</h1>
+    <p>
+      Feel free to contact us any time. We will get back you as soon as can!
+    </p>
+    <form [formGroup]="contactForm" (submit)="onSubmit()">
+      <input formControlName="name" type="text" placeholder="Nome" />
+      <input formControlName="email" type="text" placeholder="E-mail" />
+      <input formControlName="message" type="text" placeholder="Menssagem" />
+      <button type="submit">SEND</button>
+    </form>
+  </div>
+</div>
