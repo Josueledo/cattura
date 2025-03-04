@@ -1,18 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   scroll-behavior: smooth;
 }
 
-// $primary:#452a35;
-$primary:#463232;
-$primary:#274cc6;
-$white1:#f7f7f7;
-$white2:#F1eee9;
-$secondary:#c2b280;
-$black:#1a1818;
-$dark_font:#1a1818;
-$border:rgb(192, 191, 191);
+$primary: #B763DB;
+$white1: #f7f7f7;
+$white2: #f1eee9;
+$secondary: #c2b280;
+$black: #131313;
+$dark_font: #1a1818;
+$border: rgb(192, 191, 191);
+
+@mixin background-gradient {
+  background: rgb(244, 240, 246);
+  background: radial-gradient(
+    circle,
+    rgba(244, 240, 246, 1) 0%,
+    rgba(236, 228, 241, 1) 100%
+  );
+}
+@mixin primary-gradient {
+  background: rgb(104,68,120);
+  background: linear-gradient(90deg, rgba(104,68,120,1) 0%, rgba(186,100,223,1) 100%);
+}

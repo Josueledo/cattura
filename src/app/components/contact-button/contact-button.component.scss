@@ -19,3 +19,8 @@
     cursor: pointer;
   }
 }
+@media (width <= 800px) {
+  .button{
+    margin: 30px;
+  }
+}

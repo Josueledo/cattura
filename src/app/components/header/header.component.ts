@@ -51,16 +51,16 @@ export class HeaderComponent {
 
     if (window.scrollY === 0) {
       container.style.background = "transparent"
-      name.style.color = "white"
-      item.style.color = "white"
-      item2.style.color = "white"
-      responsive.style.color = "white"
+      // name.style.color = "white"
+      // item.style.color = "white"
+      // item2.style.color = "white"
+      // responsive.style.color = "white"
     } else {
       container.style.background = "#f7f7f7"
-      name.style.color = "black"
-      item.style.color = "black"
-      item2.style.color = "black"
-      responsive.style.color = "black"
+      // name.style.color = "black"
+      // item.style.color = "black"
+      // item2.style.color = "black"
+      // responsive.style.color = "black"
     }
   }
 }

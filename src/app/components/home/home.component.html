@@ -1,42 +1,64 @@
-@defer () {
-  <app-header></app-header>
-  <div class="container">
-    <div class="banner" id="section1">
-      <h1>TESTES MOTION</h1>
+@defer {
+<app-header></app-header>
+<div class="container">
+  <div class="banner" id="section1">
+    <div class="info">
+      <span class="title title1">WE ARE</span>
+      <span class="title title2">FULL-SERVICE</span>
+      <span class="title title3">AGENCY</span>
     </div>
-    <section id="section2">
-      <div class="left">
-        <video loop autoplay src="https://cdn.dribbble.com/userupload/31271721/file/large-c1d48c6dd48937bbbba410c834097442.mp4"></video>
-      </div>
-      <div class="right">
-        <div class="item">
-          <div class="title">
-            <h1>Crie um site</h1>
-            <fa-icon [icon]="faAngleRight"></fa-icon>
-
-          </div>
-          <p>Para o design do seu site, use um dos nossos templates, fontes e paletas de cores — os melhores da categoria.</p>
-        </div>
-        <div class="item">
-          <div class="title">
-            <h1>Alavangue o seu produto</h1>
-            <fa-icon [icon]="faAngleRight"></fa-icon>
-
-          </div>
-          <p>Divulgue sua empresa e aumente sua base de clientes com ferramentas de e-mail marketing, mídias sociais e SEO.</p>
-        </div>
-        <div class="item">
-          <div class="title">
-            <h1>Divulgue a sua empresa</h1>
-            <fa-icon [icon]="faAngleRight"></fa-icon>
-          </div>
-
-          <p>Divulgue sua empresa e aumente sua base de clientes com ferramentas de e-mail marketing, mídias sociais e SEO.</p>
-        </div>
-      </div>
-    </section>
   </div>
-  <app-email></app-email>
-  <app-footer></app-footer>
-  <app-contact-button></app-contact-button>
+  <div class="faixa">
+    <ul>
+      <li>STRATEGY</li>
+      <li>STRATEGY</li>
+      <li>STRATEGY</li>
+      <li>STRATEGY</li>
+    </ul>
+  </div>
+  <section id="section2">
+    <div class="left">
+      <div class="image_container">
+        <img src="foto4.png" alt="" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="item">
+        <div class="title">
+          <h1>CRIE UM SITE</h1>
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </div>
+        <p>
+          Para o design do seu site, use um dos nossos templates, fontes e
+          paletas de cores — os melhores da categoria.
+        </p>
+      </div>
+      <div class="item">
+        <div class="title">
+          <h1>ALAVANQUE SEU NEGOCIO</h1>
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </div>
+        <p>
+          Divulgue sua empresa e aumente sua base de clientes com ferramentas de
+          e-mail marketing, mídias sociais e SEO.
+        </p>
+      </div>
+      <div class="item">
+        <div class="title">
+          <h1>DIVULGUE SUA EMPRESA</h1>
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </div>
+
+        <p>
+          Divulgue sua empresa e aumente sua base de clientes com ferramentas de
+          e-mail marketing, mídias sociais e SEO.
+        </p>
+      </div>
+    </div>
+  </section>
+  <app-section3></app-section3>
+  <app-section4></app-section4>
+</div>
+<app-footer></app-footer>
+<!-- <app-contact-button></app-contact-button> -->
 }

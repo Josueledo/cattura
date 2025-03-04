@@ -1,0 +1,114 @@
+@import "../../../styles.scss";
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0px 90px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include background-gradient;
+  h3{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 15px;
+    color: $black;
+    padding: 60px 0;
+  }
+  .items_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    .item {
+      max-height: 300px;
+      max-width: 48%;
+      overflow: hidden;
+      list-style: none;
+      border-radius: 20px;
+      position: relative;
+      &.main {
+        max-width: 100%;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      span {
+        position: absolute;
+        bottom: 15px;
+        border-radius: 10px;
+        left: calc(50% - 45%);
+        z-index: 2;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        color: $white1;
+        letter-spacing: 10px;
+        padding-left: 20px;
+        font-size: .7rem;
+        background: rgba(168, 168, 168, 0.332);
+        box-shadow: 0 8px 32px 0 rgba(22, 23, 39, 0.37);
+        backdrop-filter: blur(12.5px);
+        -webkit-backdrop-filter: blur(12.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+    }
+  }
+  .more_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+      .more{
+          letter-spacing: 5px;
+          color: gray;
+          text-align: center;
+          font-size: .8rem;
+        }
+        fa-icon{
+            color: gray;
+        }
+    }
+}
+@media (width <= 1024px) {
+    .container{
+        padding: 0px 40px;
+
+        .items_container{
+            .item{
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media (width <= 500px) {
+    .container{
+        padding: 0px 20px;
+        h3{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .items_container{
+            .item{
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media (width <= 330px) {
+    .container{
+        h3{
+            font-size: 1rem;
+        }
+    }
+  }

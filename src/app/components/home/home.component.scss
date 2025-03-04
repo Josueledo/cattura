@@ -1,99 +1,280 @@
 @import "../../../styles.scss";
 
-.container{
+.container {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  .banner{
+  overflow: hidden;
+  position: relative;
+  .banner {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $white1;
-    background-color: $primary;
+    @include background-gradient;     
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgb(43, 43, 43);
+   
+      .title{
+        font-size: 4rem;
+        letter-spacing: 20px;
+        font-weight: 500;
+        color: $black;
+      }
+      .title1{
+
+        transform: translateX(-80px);
+      }
+      .title3{
+        font-weight: 300;
+        color: $primary;
+        transform: translateX(80px);
+      }
+    }
+
   }
-  #section2{
+  .faixa{
+    @include primary-gradient;
+    width: 110%;
+    height: 50px;
+    rotate: -3deg;
+    top: 90vh;
+    position: absolute;
+    ul{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      color: $white1;
+      padding: 0px 90px;
+      li{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 10px;
+
+      }
+    }
+  }
+  #section2 {
+    @include background-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 700px;
+    padding: 70px 40px;
+    gap: 20px;
+    .left {
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $white1;
-      width: 100%;
-      height: 700px;
-      padding: 70px 40px;
-      gap: 20px;
-      .left{
-        width: 50%;
+      .image_container{
+        @include primary-gradient;
         display: flex;
         align-items: center;
         justify-content: center;
-        video{
+        max-width: 550px;
+        width: 90%;
+        height: 300px;
+        img {
           max-width: 550px;
           width: 90%;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.345);
         }
       }
-      .right{
-        width: 50%;
+    }
+    .right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      .item {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-        .item{
+        gap: 20px;
+        .title {
           display: flex;
-          flex-direction: column;
-          gap: 20px;
-          .title{
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            gap: 10px;
-            h1{
-              font-size: 1.3rem;
-              color: $black;
-              position: relative;
-              &:hover{
-                cursor: pointer;
-                &::before{
-                  width: 100%;
-                }
-              }
-              &::before{
-                content: "";
-                position: absolute;
-                width: 0%;
-                height: 1px;
-                transition: all .3s ease-in;
-                bottom: -10px;
-                background-color: $black;
+          align-items: center;
+          justify-content: start;
+          gap: 10px;
+          h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 10px;
+            color: $black;
+            position: relative;
+            &:hover {
+              cursor: pointer;
+              &::before {
+                width: 100%;
               }
             }
-
+            &::before {
+              content: "";
+              position: absolute;
+              width: 0%;
+              height: 1px;
+              transition: all 0.3s ease-in;
+              bottom: -10px;
+              background-color: $black;
+            }
           }
         }
+        p{
+          color: rgb(108, 108, 108);
+        }
       }
+    }
   }
 }
 
 @media (width <= 800px) {
-  .container{
-    #section2{
+  .container {
+    .banner{
+      .info{
+        .title{
+          font-size: 2rem;
+        }
+      }
+    }
+    .faixa{
+      ul{
+        li{
+          font-size: .6rem;
+          letter-spacing: 5px;
+          width: 25%;
+          text-align: center;
+        }
+      }
+    }
+    #section2 {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      .right{
+      gap: 60px;
+      .right {
         width: 100%;
       }
-      .left{
+      .left {
         width: 100%;
-        video{
+        video {
           width: 100%;
           max-width: 400px;
         }
       }
     }
+  }
+}
+@media (width <= 500px) {
+  .container {
+    .banner{
+      .info{
+        .title{
+          font-size: 1.5rem;
+          letter-spacing: 10px;
+        }
+        .title1{
+          transform: translateX(-40px);
+        }
+      }
+    }
+    .faixa{
+      ul{
+        padding: 0px 40px;
+        li{
+          letter-spacing: 2px;
+          font-size: .5rem;
+        }
+      }
+    }
+    #section2 {
+      gap: 60px;
+      .right {
+        width: 100%;
+        .item{
+          .title{
+            h1{
+              font-size: .9rem;
+            }
+          }
+          p{
+            font-size: .8rem;
+          }
+        }
+      }
+      .left {
+        width: 100%;
+        .image_container{
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 330px) {
+  .container{
+    
+    .banner{
+      .info{
+
+        .title{
+          font-size: 2.5rem;
+        }
+        .title1, .title3{
+          transform: translateX(0px);
+
+        }
+        .title2{
+          font-size: 1rem;
+        }
+      }
+    }
+    .faixa{
+      ul{
+        padding: 0px 20px;
+        li{
+          letter-spacing: 2px;
+          font-size: .5rem;
+        }
+      }
+    }
+    #section2{
+      padding: 70px 20px;
+    }
+  }
+}
+/* Animação de rolagem infinita */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% + 180px));
+  }
+}
+@keyframes scrollReverse {
+  0% {
+    transform: translateY(calc(-100% + 180px));
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
