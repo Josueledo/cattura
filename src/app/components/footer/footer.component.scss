@@ -47,7 +47,13 @@
       -webkit-user-select: none; /* Safari */
       -moz-user-select: none; /* Firefox */
       -ms-user-select: none; /* IE/Edge */
-
+      a{
+        text-decoration: none;
+        color: $black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
       &.active {
         padding-bottom: 0;
         max-height: 200px;
@@ -64,6 +70,10 @@
         align-items: center;
         cursor: pointer;
         font-weight: 400;
+        user-select: none; /* Impede a seleção */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
       }
       .faq-answer {
         max-height: 0;

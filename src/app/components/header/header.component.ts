@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
@@ -5,7 +6,7 @@ import { faCoffee, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -14,6 +15,7 @@ export class HeaderComponent {
   faBars = faBars;
   isVisible = false;
   faClose = faClose
+  isActive: boolean = false;
 
   ngOnInit() {
     this.checkScrollPosition();
@@ -26,6 +28,9 @@ export class HeaderComponent {
   menu() {
     let content = document.querySelector('.content') as HTMLLIElement;
     this.isVisible = !this.isVisible;
+
+    this.isActive = !this.isActive;
+
     if (this.isVisible === false) {
       content.style.right = '-150%';
       content.style.transform = 'skew(20deg)';
@@ -51,16 +56,10 @@ export class HeaderComponent {
 
     if (window.scrollY === 0) {
       container.style.background = "transparent"
-      // name.style.color = "white"
-      // item.style.color = "white"
-      // item2.style.color = "white"
-      // responsive.style.color = "white"
+
     } else {
       container.style.background = "#f7f7f7"
-      // name.style.color = "black"
-      // item.style.color = "black"
-      // item2.style.color = "black"
-      // responsive.style.color = "black"
+    
     }
   }
 }
