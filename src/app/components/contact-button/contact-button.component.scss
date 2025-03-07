@@ -2,25 +2,36 @@
 
 .button{
   display: flex;
-  gap: 20px;
-  background-color: $white1;
-  border: 3px solid rgb(68, 68, 68);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.336);
   position: fixed;
   bottom: 0;
   right:0 ;
   margin: 50px;
   padding: 15px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-right-radius: 50px;
   font-size: .9rem;
+  z-index: 500;
+  letter-spacing: 2px;
+  overflow: hidden;
+  img{
+    width: 100px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.363));
+  }
   &:hover{
     cursor: pointer;
   }
 }
+.progress{
+  content: '';
+  position: fixed;
+  // width: 10%;
+  height: 2px;
+  @include primary-gradient;
+  transition: all .3s;
+  top: -0px;
+  left: 0;
+  z-index: 20000;
+}
 @media (width <= 800px) {
   .button{
-    margin: 30px;
+    margin: 20px;
   }
 }

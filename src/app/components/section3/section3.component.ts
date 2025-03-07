@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
+import { faChartSimple, faBullseye, faLeaf } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-section3',
@@ -11,4 +11,6 @@ import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
 })
 export class Section3Component {
   faChartSimple = faChartSimple
+  faBullseye = faBullseye
+  faLeaf = faLeaf
 }

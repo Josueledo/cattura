@@ -77,12 +77,13 @@
       overflow: hidden;
       padding: 0px 20px;
       justify-content: center;
-
+      z-index: 900;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
       button{
         position: absolute;
         bottom: 10px;
         width: 90%;
-        height: 40px;
+        height: 60px;
         z-index: 15;
         font-weight: 400;
 

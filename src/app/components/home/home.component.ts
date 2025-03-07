@@ -1,12 +1,13 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactButtonComponent } from '../contact-button/contact-button.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Section3Component } from "../section3/section3.component";
 import { Section4Component } from "../section4/section4.component";
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ import { Section4Component } from "../section4/section4.component";
     HeaderComponent,
     FontAwesomeModule,
     FooterComponent,
-    // ContactButtonComponent,
+    ContactButtonComponent,
     CommonModule,
     Section3Component,
     Section4Component
@@ -23,7 +24,7 @@ import { Section4Component } from "../section4/section4.component";
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent{
   faAngleRight = faAngleRight;
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;
   @ViewChild('carousel2', { static: false }) carousel2!: ElementRef;
@@ -38,6 +39,12 @@ export class HomeComponent {
     { imagem: '/foto5.png' },
   ];
   clone:any = []
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+
+  ngOnInit() {
+
+
+  }
 
 
 

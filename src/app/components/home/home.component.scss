@@ -68,7 +68,8 @@
           transparent,
           #000,
           transparent
-        );
+          );
+          cursor: pointer;
         &:hover li{
           animation-play-state: paused !important;
         }

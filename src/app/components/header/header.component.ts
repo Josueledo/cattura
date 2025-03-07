@@ -49,10 +49,7 @@ export class HeaderComponent {
   }
   checkScrollPosition() {
     let container = document.querySelector('.container') as HTMLLIElement;
-    let name = document.querySelector('.name') as HTMLLIElement;
-    let item = document.querySelector('.item') as HTMLLIElement;
-    let item2 = document.querySelector('.item2') as HTMLLIElement;
-    let responsive = document.querySelector('.responsive') as HTMLLIElement;
+
 
     if (window.scrollY === 0) {
       container.style.background = "transparent"
