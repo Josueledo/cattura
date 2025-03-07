@@ -27,8 +27,7 @@ import * as AOS from 'aos'
 })
 export class HomeComponent{
   faAngleRight = faAngleRight;
-  @ViewChild('carousel', { static: false }) carousel!: ElementRef;
-  @ViewChild('carousel2', { static: false }) carousel2!: ElementRef;
+  @ViewChild('container', { static: false }) container!: ElementRef;
   
   itemHeight = 200; // Altura de cada item
 
@@ -43,12 +42,18 @@ export class HomeComponent{
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit(): void {
+    
     AOS.init({
       duration: 800, // duração em milissegundos
       easing: 'ease-in-out', // tipo de easing
       once: false, // animação só ocorre uma vez
     });
-
+    
+    
+  }
+  changeTheme(){
+    this.container.nativeElement.classList.add("dark")
+    console.log(this.container)
   }
 
 
