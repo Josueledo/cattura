@@ -12,10 +12,10 @@ export class FooterComponent {
   activeIndex: number | null = null;
 
   faqs = [
-    { question: "O que é a Cattura?", answer: "A Cattura é uma empresa especializada na criação de sites eficientes e bonitos.", open: false },
-    { question: "Quanto tempo leva para criar um site?", answer: "O tempo varia conforme a complexidade, mas geralmente de 7 a 30 dias.", open: false },
-    { question: "Posso atualizar meu site depois?", answer: "Sim! Oferecemos suporte para atualizações e melhorias contínuas.", open: false },
-    { question: "Quais tecnologias vocês usam?", answer: "Utilizamos Angular, Node.js, bancos de dados modernos e práticas de SEO avançadas.", open: false }
+    { question: "O que é a Cattura?", answer: "Somos uma empresa jovem, dinâmica e focada em consolidar nossa presença no mercado de desenvolvimento web, entregando resultados excepcionais em tudo o que fazemos.", open: false },
+    { question: "Quanto tempo leva para criar um site?", answer: "O tempo para criar um site varia conforme o tamanho e a complexidade do projeto.", open: false },
+    { question: "Posso atualizar meu site depois?", answer: "Com certeza! Mesmo após a entrega, estamos disponíveis para negociar e realizar atualizações conforme necessário.", open: false },
+    { question: "Quais tecnologias vocês usam?", answer: "Analisamos suas necessidades para identificar as melhores tecnologias a serem aplicadas em cada projeto.", open: false }
   ];
 
 

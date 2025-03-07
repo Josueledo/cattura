@@ -15,6 +15,17 @@ $black: #131313;
 $dark_font: #1a1818;
 $border: rgb(192, 191, 191);
 
+.dark{
+  $primary: #B763DB;
+  $black: #f7f7f7;
+  $white2: #f1eee9;
+  $secondary: #c2b280;
+  $white1: #131313;
+  $dark_font: #f7f7f7;
+  $border: rgb(192, 191, 191);
+
+}
+
 @mixin background-gradient {
   background: rgb(244, 240, 246);
   background: radial-gradient(

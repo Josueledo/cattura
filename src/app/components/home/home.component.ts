@@ -8,6 +8,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Section3Component } from "../section3/section3.component";
 import { Section4Component } from "../section4/section4.component";
 
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-home',
@@ -41,8 +42,12 @@ export class HomeComponent{
   clone:any = []
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
-  ngOnInit() {
-
+  ngOnInit(): void {
+    AOS.init({
+      duration: 800, // duração em milissegundos
+      easing: 'ease-in-out', // tipo de easing
+      once: false, // animação só ocorre uma vez
+    });
 
   }
 
